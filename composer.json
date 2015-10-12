@@ -1,0 +1,15 @@
+{
+  "name": "francismooreqc/phpUnitSandbox",
+  "description": "My first PHP Unit tests!",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Francis Moore",
+      "email": "francis.moore.qc@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "5.0.4"
+  }
+}
