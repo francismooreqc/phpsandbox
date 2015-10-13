@@ -6,17 +6,22 @@ class HelloWorld
 {
 
     /**
-     * @var ResourceProvider
+     * @var $_resourceProvider
      */
-    private $resourceProvider;
+    private $_resourceProvider;
 
     public function __construct(ResourceProvider $resourceProvider)
     {
-        $this->resourceProvider = $resourceProvider;
+        $this->_resourceProvider = $resourceProvider;
     }
 
     public function sayHello()
     {
-        return $this->resourceProvider->getHelloWorldMessage();
+        return $this->_resourceProvider->getHelloWorldMessage();
+    }
+
+    public function sayHelloTo($personName)
+    {
+        return "{$this->_resourceProvider->getHelloMessage()} $personName";
     }
 }
