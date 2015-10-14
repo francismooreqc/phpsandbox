@@ -1,14 +1,14 @@
 <?php
 
-require "HelloWorld.php";
+require "greetingsGenerator.php";
 
-class HelloWorldTest extends PHPUnit_Framework_TestCase
+class GreetingsGeneratorTest extends PHPUnit_Framework_TestCase
 {
     public function testCanSayHelloWorld()
     {
         $resourceProviderStub = \Mockery::mock('PhpUnitSandbox\ResourceProvider');
         $resourceProviderStub->shouldReceive('getHelloWorldMessage')->andReturn('Hola mundo!');
-        $sut = new PhpUnitSandbox\HelloWorld($resourceProviderStub);
+        $sut = new PhpUnitSandbox\GreetingsGenerator($resourceProviderStub);
 
         $answer = $sut->sayHello();
 
@@ -24,7 +24,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
     {
         $resourceProviderStub = \Mockery::mock('PhpUnitSandbox\ResourceProvider');
         $resourceProviderStub->shouldReceive('getHelloMessage')->andReturn($salutation);
-        $sut = new PhpUnitSandbox\HelloWorld($resourceProviderStub);
+        $sut = new PhpUnitSandbox\GreetingsGenerator($resourceProviderStub);
 
         $answer = $sut->sayHelloTo($personName);
 

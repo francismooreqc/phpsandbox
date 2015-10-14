@@ -12,4 +12,5 @@ namespace PhpUnitSandbox;
 interface ResourceProvider
 {
     public function getHelloWorldMessage();
+    public function getHelloMessage();
 }

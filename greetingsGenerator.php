@@ -2,7 +2,7 @@
 
 namespace PhpUnitSandbox;
 
-class HelloWorld
+class GreetingsGenerator
 {
 
     /**
